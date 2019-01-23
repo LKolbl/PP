@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        KKY/PP Míč rotující na cívce
+    </title>
+    <style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+}
+
+#customers td, #customers th {
+  border: 1px solid black;;
+  padding: 8px;
+  text-align: left;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ef9d00;
+  color: white;
+}
+</style>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">    
+</head>
+
+<body>
+    <header id="header">
+        <h1>KKY/PP Míč rotující na cívce</h1>
+    </header>
+    <main id="content">
+    	<div id="hodnoty">
+    		<table id="customers" align="center">
+  			<tr>
+    		<th>Informace</th>  </tr>
+  			<tr>
+    		<td><span class="desc">Uhel natočení motoru: </span> 
+			<input id="UHEL_MOTORU" type="text" name="value" value="XXX" readonly /></td>
+  			</tr>
+  			<tr>
+    		<td><span class="desc">Uhel natočení míče: </span> 
+			<input id="UHEL_MICE" type="text" name="value" value="XXX" readonly /></td>
+  			</tr>
+  			<tr>
+    		<td><span class="desc">Rychlost otáčení motoru: </span> 
+			<input id="RYCHLOST_MOTORU" type="text" name="value" value="XXX" readonly /></td>
+  			</tr>
+			</table>
+			<!--
+        	<p align="left">
+        	<span class="desc">Uhel natočení motoru: </span> 
+			<input id="UHEL_MOTORU" type="text" name="value" value="XXX" readonly />
+			<br />
+			<hr />
+			</p>
+			<p align="left">
+			<span class="desc">Uhel natočení míče: </span> 
+			<input id="UHEL_MICE" type="text" name="value" value="XXX" readonly />
+			<br />
+			<hr />
+			</p>
+			<p align="left">
+			<span class="desc">Rychlost otáčení motoru: </span> 
+			<input id="RYCHLOST_MOTORU" type="text" name="value" value="XXX" readonly />
+			<br />
+			</p>
+			-->
+        </div>
+        <svg id="svgcanvas" xmlns="http://www.w3.org/2000/svg" version="1.1" style="width:1000px; height: 600px; margin: 0 auto;">
+
+			
+            <circle id="zabrana1" cx="230" cy="200" r="50" stroke="black" stroke-width="2" fill="Grey" />
+
+           	<circle id="zabrana2" cx="770" cy="200" r="50" stroke="black" stroke-width="2" fill="Grey" />
+           	
+            <circle id="civka" cx="500" cy="400" r="150" stroke="black" stroke-width="2" fill="SaddleBrown" />
+            <g id="groupa">
+            <circle id="mic" cx="500" cy="150" r="100" stroke="DarkBlue" stroke-width="2" fill="SkyBlue" />
+            <line id="cara1" x1="500" y1="50" x2="500" y2="250" style="stroke:rgb(0,0,0);stroke-width:3" />
+            </g>
+           	<line id="cara" x1="500" y1="250" x2="500" y2="550" style="stroke:rgb(0,0,0);stroke-width:3" />
+            
+        </svg>
+        <div id="controls">
+            <button id="tlacitkoStart" style="width:180x; height: 100px;" onclick="spustit()">Spustit/Zastavit</button>
+            <button id="tlacitkoDemo" style="width:180x; height: 100px;" onclick="demo()">Demo</button>
+        </div>
+        
+        
+        <!-- JS -->
+        <script type="text/javascript" src="js/rexhmi.min.js?version=2.50.99-9640"></script>
+        <!-- Spusti se jakmile je stranka nactena -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </main>
+</body>
+
+</html>
